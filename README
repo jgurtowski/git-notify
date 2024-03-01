@@ -1,0 +1,24 @@
+# Purpose
+
+The purpose of this project is to periodically check if there are
+uncommitted changes in local git repos and to send a system mail reminder.
+
+The script will run via cron on a regular basis
+
+Likely other ways to implement this, but this seems easy
+
+# Dependencies
+
+libgit2 - for working with git 
+mailutils + sendmail - for sending emails
+
+# Notify terminal when new mail is available
+
+Add to .bashrc:
+
+```
+if mail -e; then
+   echo "You have mail";
+fi
+```
+
